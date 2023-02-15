@@ -1,20 +1,30 @@
-const etch = document.querySelector('.etch');
-const square = document.querySelector('#square');
-const row = document.querySelector('.row');
 const grid = document.querySelector('.grid');
+const clear = document.querySelector('#clear');
 
-let x = 1; // in this instance, x is the number on the slider to create an x / x grid, so 1/1 here.
+let x = 16 ;
+let y = (1 / x) * 100;
 
-//this function will reset the grid by deleting the squares, immediately generating the new size afterward.
-const squares = function () {
-    //etch.removeChild(grid);
-
+const etch = function() {
+    
+for (z = 0; z < x * x; z++) {
+    let square = document.createElement('div');
+    grid.appendChild(square);
+    square.classList.add('square');
+    square.style.width = `${y}%`;
+    square.style.height = `${y}%`;
+    square.addEventListener('mousemove', () => {
+        square.setAttribute("id", "filled");
+    });
 }
-/*square.addEventListener('mousedown', () => {
-    square.classList.add('filled');
-    console.log('hello');
-} ) */
-console.log('hey');
-const buttons = document.querySelectorAll('#button');
+}
+etch();
+const clearGrid = function() {
+        while (grid.firstChild) {
+            grid.removeChild(grid.firstChild);
+        }
+    etch();
+}
 
-const blocks = square.forEach('#square');
+clear.addEventListener('click', clearGrid);
+
+

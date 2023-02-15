@@ -17,7 +17,7 @@ body {
     height: 550px;
     display: flex;
     margin: 25px;
-    flex-direction: column;
+
 }
 .controls {
     background-color: violet;
@@ -25,13 +25,13 @@ body {
     width: 250px;
     
 }
-#square {
-    
+
+.grid {
     display: flex;
-    flex: 1;
-    padding: 50%;
-    width: 50%;
-}
+    width: 100%;
+    flex-wrap: wrap;
+    
+}   
 
 li {
     background-color: orange;
@@ -44,6 +44,14 @@ li {
     height: 50%;
     width: 50%;
 }
-.filled {
+#filled {
     background-color: black;
 }
+.square {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
