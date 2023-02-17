@@ -9,7 +9,6 @@ let x = 16;
 let y = (1 / x) * 100;
 let moused = 0;
 
-
 body.addEventListener('mousedown', () => {
   moused++;
   
@@ -19,6 +18,7 @@ body.addEventListener('mouseup', () => {
   
 });
 
+// Building the grid
 const etch = function() {
     
 for (z = 0; z < x * x; z++) {
@@ -44,6 +44,8 @@ for (z = 0; z < x * x; z++) {
 }
 
 etch();
+
+// Resetting the grid
 const clearGrid = function() {
         while (grid.firstChild) {
             grid.removeChild(grid.firstChild);
@@ -57,7 +59,7 @@ const reseter = function () {
     clearGrid();
 }
 
+// Running the controls
 clear.addEventListener('click', clearGrid);
-
 newGrid.addEventListener('click', reseter);
     
