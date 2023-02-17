@@ -1,5 +1,5 @@
 body {
-    background-color: grey;
+    background-color: gray;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -8,11 +8,9 @@ body {
 .container {
     background-color: green;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
 }
 .etch {
-    background-color: yellow;
+    background-color: white;
     width: 550px;
     height: 550px;
     display: flex;
@@ -23,7 +21,9 @@ body {
     background-color: violet;
     display: flex;
     width: 250px;
-    
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .grid {
@@ -33,25 +33,36 @@ body {
     
 }   
 
+ul {
+    padding: 0;
+    margin: 0;
+}
 li {
     background-color: orange;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    list-style-type: none;
+    margin: 0;
 }
-.row {
-    display: flex;
-    height: 50%;
-    width: 50%;
-}
+
 #filled {
-    background-color: black;
+    
 }
 .square {
-    background-color: white;
+    
     display: flex;
     justify-content: center;
     align-items: center;
+    
+}
+.square:hover {
+    background-color: gray;
+}
+.gridlines {
+    box-shadow: inset 0.05em 0.05em 1px black;
 }
 
-
+.slidecontainer {
+    background-color: orange;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
